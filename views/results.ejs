@@ -1,0 +1,55 @@
+<% include ./partials/header %>
+
+<div class="ui container">
+
+     <div class="ui secondary  menu">
+          <div class="right menu">
+               <a class="active item" href='/'>Go Back Home</a>
+          </div>
+     </div>
+     <hr>
+     <h1> Results:</h1>
+     <div class="ui two column grid">
+          <%if(data.Search) { %>
+          <% data.Search.forEach(function(movie){ %>
+          <div class="column">
+               <div class="ui segment">
+                    <img class="ui fluid image" src=<%=movie.Poster%>>
+                    <div class="content">
+                         <div class="header">
+                              <h2><%= movie.Title %> </h2>
+
+                         </div>
+                         <div class="description">
+                              <h3><%=movie.Year %></h3>
+                         </div>
+
+                    </div>
+               </div>
+          </div>
+          <% }) %>
+          <%} else{ %>
+          <div class="ui one column grid">
+               <div class="ui negative message">
+                    <div class="header">
+                         That wasnt supposed to happen
+                    </div>
+                    <p>Please enter something a bit more specific
+                    </p>
+
+                    <a href="/">Go Back</a>
+               </div>
+          </div>
+          <%} %>
+     </div>
+</div>
+
+
+
+
+
+
+
+
+
+<% include ./partials/footer %>

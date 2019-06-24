@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui container">
+    <div class="ui secondary  menu">
+        <a class=" item" href='/'>Home</a>
+    </div>
+    <hr>
+    <h1> The Great Movie/TV Show Searcher </h1>
+    <form class="ui form" action="/results" method="GET">
+        <div class="field">
+            <label>Search for movies and tv shows:</label>
+            <input class="prompt" name='search' type="text" placeholder="Movies / Tv Shows...">
+
+
+        </div>
+        <button class="ui primary button" type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+<% include ./partials/footer %>
